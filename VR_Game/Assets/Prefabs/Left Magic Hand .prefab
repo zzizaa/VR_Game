@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 823067663740609793}
   - component: {fileID: 9008465306477793990}
+  - component: {fileID: 811148501087451824}
   m_Layer: 0
   m_Name: Magic Circle
   m_TagString: Untagged
@@ -25,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697922577860560180}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.027, z: -0}
-  m_LocalScale: {x: 0.015854955, y: 0.015854955, z: 0.015854955}
+  m_LocalPosition: {x: -0.0032, y: -0.0343, z: 0.0303}
+  m_LocalScale: {x: 0.025294995, y: 0.025294995, z: 0.025294995}
   m_Children: []
   m_Father: {fileID: 6965049429386279224}
   m_RootOrder: 1
@@ -82,6 +83,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &811148501087451824
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697922577860560180}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3c14e8aafedc6ff4e802e669d0c057a0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3233682034972244008
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +197,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3887185075125053422, guid: bdeb76b740844b2499d399c8dc933729, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 80581f52ee77b5542818479629901381, type: 2}
     - target: {fileID: 919132149155446097, guid: bdeb76b740844b2499d399c8dc933729, type: 3}
       propertyPath: m_Name
       value: HandWithAnimation
