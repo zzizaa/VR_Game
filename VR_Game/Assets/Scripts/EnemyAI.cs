@@ -7,6 +7,7 @@ public class EnemyAI : MonoBehaviour
 {
     public NavMeshAgent agent;
     public Transform player;
+    public GameObject ground;
     public LayerMask whatIsGround, whatIsPlayer;
     public float health;
     
@@ -62,8 +63,11 @@ public class EnemyAI : MonoBehaviour
         //Calculate random point in range
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
-
-        walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
+        float consY = transform.position.y;
+        if(consY <= ground.transform.position.y){
+            consY = consY - ground.transform.position.y;
+        }
+        walkPoint = new Vector3(transform.position.x + randomX, consY/*transform.position.y*/, transform.position.z + randomZ);
 
         if (Physics.Raycast(walkPoint, transform.up, 2f, whatIsGround))
             walkPointSet = true;
