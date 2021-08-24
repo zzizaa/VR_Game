@@ -552,9 +552,10 @@ GameObject:
   m_Component:
   - component: {fileID: 944858455}
   - component: {fileID: 944858456}
+  - component: {fileID: 944858457}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -584,8 +585,23 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.0537889
-  m_Center: {x: 0, y: -0.07579923, z: 0.018119097}
+  m_Radius: 0.45644882
+  m_Center: {x: -0.021939129, y: -0.093307704, z: 0.018119097}
+--- !u!114 &944858457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944858454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65687cc5e62259b42acc9fb11879a83a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wall: {fileID: 3711319300337600086, guid: c992ad87693da8542a162d5010d5a7b0, type: 3}
+  player: {fileID: 944858454}
+  spawnDistance: 10
 --- !u!1 &1040047295
 GameObject:
   m_ObjectHideFlags: 0

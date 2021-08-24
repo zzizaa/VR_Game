@@ -270,10 +270,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   health: 120
+  isEnemyHitted: 0
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 2
   timeBetweenAttacks: 0.5
-  projectile: {fileID: 3911294206568213399, guid: 12aa3a7a37112b946b9665ffa3fba194, type: 3}
+  projectile: {fileID: 8600084242651929674, guid: 16ec12b1befca2146bb0323d537c98dc, type: 3}
   sightRange: 2
   attackRange: 1
   playerInsightRange: 0

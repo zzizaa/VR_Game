@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+    
     public NavMeshAgent agent;
     public Transform player;
     public GameObject ground;
@@ -85,15 +86,16 @@ public class EnemyAI : MonoBehaviour
         
         if (!alreadyAttacked)
         {
-            //print("Fuoco");
+            print("Fuoco");
             //Attack code here
-            //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
             //End of attack code
         
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
+
         }
     }
 
