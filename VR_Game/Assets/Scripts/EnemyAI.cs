@@ -10,7 +10,7 @@ public class EnemyAI : MonoBehaviour
     public GameObject ground;
     public LayerMask whatIsGround, whatIsPlayer;
     public float health;
-    
+    public bool isEnemyHitted = false;
     
     //Patroling
     public Vector3 walkPoint;
@@ -85,7 +85,7 @@ public class EnemyAI : MonoBehaviour
         
         if (!alreadyAttacked)
         {
-            print("Fuoco");
+            //print("Fuoco");
             //Attack code here
             //Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
@@ -108,9 +108,30 @@ public class EnemyAI : MonoBehaviour
         if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Sword" && isEnemyHitted == false)
+        {
+            print("Enemy Colpita - Entrata in collisione");
+            TakeDamage(25);
+            isEnemyHitted = true;
+        } 
+    } 
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Sword")
+        {
+            print("Enemy Colpita - Uscita dalla collisione");
+            isEnemyHitted = false;
+        } 
+    } 
+
     private void DestroyEnemy()
     {
         Destroy(gameObject);
+        print("Enemy Distrutta");
+
     }
 
     private void OnDrawGizmosSelected()
