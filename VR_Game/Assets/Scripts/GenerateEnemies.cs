@@ -20,7 +20,7 @@ public class GenerateEnemies : MonoBehaviour
     {
         while (enemyCount < 10)
         {
-            int x = Random.Range(0, 1);
+            int x = Random.Range(0, 2);
             xPos = Random.Range(-10, 10);
             zPos = Random.Range(-10, 10);
             switch (x)
