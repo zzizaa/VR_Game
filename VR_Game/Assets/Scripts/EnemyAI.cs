@@ -15,7 +15,7 @@ public class EnemyAI : MonoBehaviour
     
     //Patroling
     public Vector3 walkPoint;
-    private bool walkPointSet;
+    public bool walkPointSet;
     public float walkPointRange;
     
     //Attacking
@@ -70,7 +70,7 @@ public class EnemyAI : MonoBehaviour
         }
         walkPoint = new Vector3(transform.position.x + randomX, consY/*transform.position.y*/, transform.position.z + randomZ);
 
-        if (Physics.Raycast(walkPoint, transform.up, 2f, whatIsGround))
+        if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
             walkPointSet = true;
     }
     private void ChasePlayer()
@@ -88,6 +88,7 @@ public class EnemyAI : MonoBehaviour
         {
             print("Fuoco");
             //Attack code here
+            /*
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
@@ -95,7 +96,7 @@ public class EnemyAI : MonoBehaviour
         
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
-
+            */
         }
     }
 

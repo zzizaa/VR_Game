@@ -14,7 +14,7 @@ public class SpawnWall : MonoBehaviour
     {
          //if (Input.GetMouseButtonDown(0))
         //{
-        if (InputFeatureUsage.primaryButton)
+        /*if (InputFeatureUsage.primaryButton)
         	print("Bottone premuto");
             Vector3 playerPos = player.transform.position;
             Vector3 playerDirection = player.transform.forward;
@@ -23,7 +23,7 @@ public class SpawnWall : MonoBehaviour
             Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
 
             Instantiate(wall, spawnPos, playerRotation);
-            anim.Play();
+            anim.Play();*/
         //}
     }
 }
