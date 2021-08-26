@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -11,7 +13,11 @@ public class EnemyAI : MonoBehaviour
     public GameObject ground;
     public LayerMask whatIsGround, whatIsPlayer;
     public float health;
+    public float currentHealth;
     public bool isEnemyHitted = false;
+    
+    //healthbar
+    public event Action<float> OnHealthPctChanged = delegate{  }; 
     
     //Patroling
     public Vector3 walkPoint;
@@ -32,6 +38,8 @@ public class EnemyAI : MonoBehaviour
         player = GameObject.Find("Player").transform;
         
         agent = GetComponent<NavMeshAgent>();
+
+        currentHealth = health;
     }
 
     private void Update()
@@ -43,6 +51,7 @@ public class EnemyAI : MonoBehaviour
         if (!playerInsightRange && !playerInAttackRange) Patroling();
         if (playerInsightRange && !playerInAttackRange) ChasePlayer();
         if (playerInsightRange && playerInAttackRange) AttackPlayer();
+        
     }
 
     private void Patroling()
@@ -107,8 +116,8 @@ public class EnemyAI : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+        currentHealth -= damage;
+        if (currentHealth <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
 
     public void OnTriggerEnter(Collider other)
