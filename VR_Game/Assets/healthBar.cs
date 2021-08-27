@@ -11,6 +11,8 @@ public class healthBar : MonoBehaviour
 
     public float updateSpeedSeconds = 0.5f;
 
+    public Camera cam;
+
     private void Awake()
     {
         GetComponentInParent<EnemyAI>().OnHealthPctChanged += HandleHealthChanged;
@@ -19,7 +21,7 @@ public class healthBar : MonoBehaviour
     private void HandleHealthChanged(float pct)
     {
         foregroundImage.fillAmount = pct;
-        //StartCoroutine(ChangeToPct(pct));
+        StartCoroutine(ChangeToPct(pct));
     }
 
     private IEnumerator ChangeToPct(float pct)
