@@ -11,7 +11,7 @@ public class healthBar : MonoBehaviour
 
     public float updateSpeedSeconds = 0.5f;
 
-    public Camera cam;
+    //public Camera cam;
 
     private void Awake()
     {
