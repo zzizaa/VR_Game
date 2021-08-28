@@ -157,6 +157,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &426414251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5422075424393580371, guid: 837ad7aa0d079474c984d2aa4dddfb5a, type: 3}
+  m_PrefabInstance: {fileID: 1526025427}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &426414253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426414251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65687cc5e62259b42acc9fb11879a83a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wall: {fileID: 3711319300337600086, guid: c992ad87693da8542a162d5010d5a7b0, type: 3}
+  player: {fileID: 426414251}
+  spawnDistance: 5
 --- !u!1001 &449512668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -681,6 +701,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5422075424393580370, guid: 837ad7aa0d079474c984d2aa4dddfb5a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 5422075424393580380, guid: 837ad7aa0d079474c984d2aa4dddfb5a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 426414251}
+    - target: {fileID: 5422075424393580381, guid: 837ad7aa0d079474c984d2aa4dddfb5a, type: 3}
+      propertyPath: m_Radius
+      value: 0.34880966
+      objectReference: {fileID: 0}
+    - target: {fileID: 5422075424393580381, guid: 837ad7aa0d079474c984d2aa4dddfb5a, type: 3}
+      propertyPath: m_Center.y
+      value: -0.09330773
+      objectReference: {fileID: 0}
+    - target: {fileID: 5422075424393580381, guid: 837ad7aa0d079474c984d2aa4dddfb5a, type: 3}
+      propertyPath: m_Center.z
+      value: -0.015544236
+      objectReference: {fileID: 0}
     - target: {fileID: 5422075425742332909, guid: 837ad7aa0d079474c984d2aa4dddfb5a, type: 3}
       propertyPath: m_TagString
       value: MainCamera
@@ -688,6 +728,10 @@ PrefabInstance:
     - target: {fileID: 5422075426393253682, guid: 837ad7aa0d079474c984d2aa4dddfb5a, type: 3}
       propertyPath: m_Name
       value: VR Rig
+      objectReference: {fileID: 0}
+    - target: {fileID: 5422075426393253682, guid: 837ad7aa0d079474c984d2aa4dddfb5a, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5422075426393253692, guid: 837ad7aa0d079474c984d2aa4dddfb5a, type: 3}
       propertyPath: m_RootOrder
