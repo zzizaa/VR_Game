@@ -95,7 +95,7 @@ public class EnemyAI : MonoBehaviour
         
         if (!alreadyAttacked)
         {
-            print("Fuoco");
+            //print("Fuoco");
             //Attack code here
             /*
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
