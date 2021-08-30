@@ -15,7 +15,7 @@ public class HandPresence : MonoBehaviour
 
         foreach (var item in devices)
         {
-            Debug.Log(item.name + item.characteristics);
+            //Debug.Log(item.name + item.characteristics);
         }
         
         if (devices.Count > 0)
@@ -31,21 +31,21 @@ public class HandPresence : MonoBehaviour
         targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButtonValue);
         if (primaryButtonValue)
         {
-            Debug.Log("Primary Button Pressed - X PREMUTO");
+           // Debug.Log("Primary Button Pressed - X PREMUTO");
         }
         
         //Bottone Y
         targetDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out bool secondaryButtonValue);
         if (secondaryButtonValue)
         {
-            Debug.Log("Secondary Button Pressed - Y PREMUTO");
+           // Debug.Log("Secondary Button Pressed - Y PREMUTO");
         }
         
         //Trigger Principale
         targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue);
         if (triggerValue > 0.1f)
         {
-            Debug.Log("Grilletto Premuto!!!");
+           // Debug.Log("Grilletto Premuto!!!");
         }
     }
 }
