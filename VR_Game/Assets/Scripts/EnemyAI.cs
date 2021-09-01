@@ -120,6 +120,16 @@ public class EnemyAI : MonoBehaviour
         if (currentHealth <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
 
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "FireBall")
+        {
+            TakeDamage(150);
+        }
+            
+        
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Sword" && isEnemyHitted == false)

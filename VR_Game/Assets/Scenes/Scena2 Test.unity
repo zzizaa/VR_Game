@@ -223,7 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7501ca267f8bae2448c852ffe83382da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireBall: {fileID: 8600084242651929674, guid: 16ec12b1befca2146bb0323d537c98dc, type: 3}
+  fireBall: {fileID: 2468664956209684978, guid: 8ea479a42b7a9f44ea0f289d123ef92b, type: 3}
+  cam: {fileID: 0}
   leftHand: {fileID: 1526025428}
   damage: 10
   delayFireBall: 1
