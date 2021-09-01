@@ -211,6 +211,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5422075424393580371, guid: 837ad7aa0d079474c984d2aa4dddfb5a, type: 3}
   m_PrefabInstance: {fileID: 1526025427}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &426414252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426414251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7501ca267f8bae2448c852ffe83382da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireBall: {fileID: 8600084242651929674, guid: 16ec12b1befca2146bb0323d537c98dc, type: 3}
+  leftHand: {fileID: 1526025428}
+  damage: 10
+  delayFireBall: 1
 --- !u!114 &426414253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -889,6 +905,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837ad7aa0d079474c984d2aa4dddfb5a, type: 3}
+--- !u!1 &1526025428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5422075425348355887, guid: 837ad7aa0d079474c984d2aa4dddfb5a, type: 3}
+  m_PrefabInstance: {fileID: 1526025427}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1544683056
 GameObject:
   m_ObjectHideFlags: 0
