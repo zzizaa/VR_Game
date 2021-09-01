@@ -172,8 +172,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
 --- !u!114 &385811981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +189,7 @@ MonoBehaviour:
   inputSource: 4
   inputButton: 2
   inputThreshold: 0.1
-  newPositionThresholdDistance: 0.5
+  newPositionThresholdDistance: 0.1
   debugCubePrefab: {fileID: 4958424470279505966, guid: 2fe76a43aa8d1c5479d3ed3152323918, type: 3}
   movementSource: {fileID: 536632043}
 --- !u!4 &385811982
@@ -295,34 +295,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b9ae461097a67246826dd67e3a1de45, type: 3}
---- !u!1 &536632042 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5422075425348355887, guid: 837ad7aa0d079474c984d2aa4dddfb5a, type: 3}
-  m_PrefabInstance: {fileID: 1526025427}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &536632043 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5422075425348355886, guid: 837ad7aa0d079474c984d2aa4dddfb5a, type: 3}
   m_PrefabInstance: {fileID: 1526025427}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &536632044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536632042}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d883d03eec2aa4488fd7631964dab56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputSource: 4
-  inputButton: 2
-  inputThreshold: 0.1
-  newPositionThresholdDistance: 0.5
-  debugCubePrefab: {fileID: 4958424470279505966, guid: 2fe76a43aa8d1c5479d3ed3152323918, type: 3}
-  movementSource: {fileID: 536632043}
 --- !u!1001 &592097791
 PrefabInstance:
   m_ObjectHideFlags: 0
