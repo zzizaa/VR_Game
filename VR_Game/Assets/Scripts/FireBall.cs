@@ -17,6 +17,7 @@ public class FireBall : MonoBehaviour
 
     public float damage = 10f;
     public float delayFireBall;
+    public bool isFire = false;
 
     private void Start()
     {
@@ -39,7 +40,7 @@ public class FireBall : MonoBehaviour
     {
         //Bottone X
         targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButtonValue);
-        if (primaryButtonValue  && isFireBallShooted == false)
+        if (primaryButtonValue  && isFireBallShooted == false && isFire == true)
         {
             Shoot();
         }
